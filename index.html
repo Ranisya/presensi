@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi DIPA Joiner</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #33cfeb, #f5f7f7);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6d00;
+            margin-bottom: 30px;
+        }
+
+        .present-status {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .present-status h2 {
+            font-size: 56px;
+            color: #1e90ff;
+            margin: 10px 0;
+        }
+
+        .ontime-points {
+            color: #ff6d00;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .session {
+            background: linear-gradient(135deg, #08c9cd, #fafaf8);
+            padding: 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            width: calc(25% - 20px);
+            box-sizing: border-box;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .session-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .session-details {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            flex-grow: 1;
+        }
+
+        .session-details p {
+            margin: 5px 0;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        .status p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .late {
+            color: #e74c3c;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .ontime {
+            color: #1616f0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .status-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .session {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .session {
+                width: 100%;
+            }
+        }
+
+        /* UI Enhancements */
+        .icon {
+            margin-left: 10px;
+            display: inline-block;
+            background-color: #ccc;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        .icon img {
+            width: 16px;
+            height: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            PRESENSI DIPA JOINER
+        </div>
+
+        <div class="present-status">
+            <p>Your Present:</p>
+            <h2>86%</h2>
+            <p>12 of 14 active sessions | Poin: 107351 LP</p>
+            <p class="ontime-points">Ontime Points next: 19680.3741 LP</p>
+        </div>
+
+        <div class="grid">
+            <div class="session">
+                <div class="session-title">P1 Instalasi Tool Pemrograman</div>
+                <div class="session-details">
+                    <p>Jadwal Tatap Muka: Mon, Sep 16, 07:30</p>
+                    <p>Opening: Sep 16, 2024, 08:00</p>
+                    <p>Closing: Sep 22, 2024, 00:00</p>
+                </div>
+                <div class="status">
+                    <p class="late">
+                        <img src="https://cdn-icons-png.flaticon.com/512/565/565529.png" alt="Late Icon" class="status-icon">
+                        Telat Presensi
+                    </p>
+                    <p>1,712 LP</p>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-title">P2 Definisi Web Mobile</div>
+                <div class="session-details">
+                    <p>Jadwal Tatap Muka: Mon, Sep 23, 07:30</p>
+                    <p>Opening: Sep 23, 2024, 08:00</p>
+                    <p>Closing: Sep 29, 2024, 00:00</p>
+                </div>
+                <div class="status">
+                    <p class="ontime">
+                        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ontime Icon" class="status-icon">
+                        Ontime Presensi
+                    </p>
+                    <p>1,444 LP</p>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-title">P3 Hello World React JS</div>
+                <div class="session-details">
+                    <p>Jadwal Tatap Muka: Mon, Sep 30, 07:30</p>
+                    <p>Opening: Sep 30, 2024, 08:00</p>
+                    <p>Closing: Oct 06, 2024, 00:00</p>
+                </div>
+                <div class="status">
+                    <p class="ontime">
+                        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ontime Icon" class="status-icon">
+                        Ontime Presensi
+                    </p>
+                    <p>2,986 LP</p>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-title">P4 Styling Web dengan CSS</div>
+                <div class="session-details">
+                    <p>Jadwal Tatap Muka: Mon, Oct 07, 07:30</p>
+                    <p>Opening: Oct 07, 2024, 08:00</p>
+                    <p>Closing: Oct 13, 2024, 00:00</p>
+                </div>
+                <div class="status">
+                    <p class="ontime">
+                        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ontime Icon" class="status-icon">
+                        Ontime Presensi
+                    </p>
+                    <p>4,087 LP</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="session">
+                    <div class="session-title">P5 Handle Aksi dengan Javascript</div>
+                    <div class="session-details">
+                        <p>Jadwal Tatap Muka: Mon, Oct 14, 07:30 ~ 3 bulan yang lalu</p>
+                        <p>Opening: Oct 14, 2024, 08:00 ~ 3 bulan yang lalu</p>
+                        <p>Closing: Oct 20, 2024, 00:00 ~ 2 bulan yang lalu</p>
+                        <p>Soal saya: 1 | <a href="#">Tanam Lagi</a></p>
+                    </div>
+                    <div class="status">
+                        <p class="ontime">
+                            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ontime Icon" class="status-icon">
+                            Ontime at Mon, Oct 14, 09:35:19
+                        </p>
+                        <p>4,757 LP</p>
+                    </div>
+                </div>
+    
+                <div class="session">
+                    <div class="session-title">P6 Github Repository</div>
+                    <div class="session-details">
+                        <p>Jadwal Tatap Muka: Mon, Oct 21, 07:30 ~ 2 bulan yang lalu</p>
+                        <p>Opening: Oct 21, 2024, 08:00 ~ 2 bulan yang lalu</p>
+                        <p>Closing: Oct 27, 2024, 00:00 ~ 2 bulan yang lalu</p>
+                        <p>Soal saya: 1 | <a href="#">Tanam Lagi</a></p>
+                    </div>
+                    <div class="status">
+                        <p class="ontime">
+                            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ontime Icon" class="status-icon">
+                            Ontime at Mon, Oct 21, 08:12:29
+                        </p>
+                        <p>5,578 LP</p>
+                    </div>
+                </div>
+    
+                <div class="session">
+                    <div class="session-title">P7 Free Hosting Web</div>
+                    <div class="session-details">
+                        <p>Jadwal Tatap Muka: Mon, Oct 28, 07:30 ~ 2 bulan yang lalu</p>
+                        <p>Opening: Oct 28, 2024, 08:00 ~ 2 bulan yang lalu</p>
+                        <p>Closing: Nov 03, 2024, 00:00 ~ 2 bulan yang lalu</p>
+                        <p>Soal saya: 1 | <a href="#">Tanam Lagi</a></p>
+                    </div>
+                    <div class="status">
+                        <p class="ontime">
+                            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ontime Icon" class="status-icon">
+                            Ontime at Mon, Oct 28, 19:12:14
+                        </p>
+                        <p>6,561 LP</p>
+                    </div>
+                </div>
+    
+                <div class="session" style="background-color: #fce4ec;">
+                    <div class="session-title">UTS</div>
+                    <div class="session-details">
+                        <p>Jadwal UTS: Senin, 04 November 2024, 07:30</p>
+                        <p>Opening: Oct 28, 2024, 08:00 ~ 2 bulan yang lalu</p>
+                        <p>Closing: Nov 03, 2024, 00:00 ~ 2 bulan yang lalu</p>
+                        <p>Syarat UTS: - | Status Kehadiran: -</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
